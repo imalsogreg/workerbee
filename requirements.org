@@ -1,0 +1,37 @@
+* workerbee
+
+Track tasks, dependencies between tasks, and the workers working on them
+
+** Sample Task Tree
+
+   Widgit A  Widgit B   Sprog
+       \         \       /
+        \         \     / 
+         \       Carriage
+          \          /    
+           \        /   Pin
+            \      /   /
+             \    /   /
+             Full Gizmo
+
+ - Task tree is specified in configuration (static)
+ - Worker assignment to nodes is dynamic   (edit via HTTP API)
+
+** Components to build
+
+ - Configuration file
+ - Web server
+ - Client
+ - Tests
+
+ (See the Trello board!)
+
+
+** Out of scope
+
+There are a few things we won't worry about today:
+
+ - HTML Frontend (for another meetup, we can build it in reflex)
+ - Authentication/Authorization
+ - Horizontal scaling (global state will live in the server)
+ - Data migrations
