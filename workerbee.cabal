@@ -18,35 +18,46 @@ extra-source-files:  CHANGELOG.md
 
 library
   exposed-modules: API
+                   Client
                    Config
+                   Docs
+                   RenderGraph
                    Server
                    TaskTree
                    Test
   -- other-modules:
   -- other-extensions:
   build-depends:       base >=4.11 && <4.12
-                     , dhall
+                     , HUnit
+                     , aeson
                      , algebraic-graphs
-                     , text
                      , bytestring
                      , containers
-                     , aeson
+                     , dhall
                      , hspec
-                     , HUnit
+                     , http-api-data
+                     , http-client
+                     , http-media
+                     , mtl
+                     , pandoc
+                     , process
                      , servant
-                     , servant-server
                      , servant-client
                      , servant-docs
+                     , servant-server
                      , stm
+                     , temporary
+                     , text
                      , unordered-containers
                      , warp
   hs-source-dirs:      src
   default-language:    Haskell2010
 
 executable workerbee
-  main-is:             Main.hs
+  main-is:             ServerMain.hs
   -- other-modules:
   -- other-extensions:
-  build-depends:       base >=4.11 && <4.12
-  hs-source-dirs:      src
+  build-depends:       base >=4.11 && <4.12,
+                       workerbee
+  hs-source-dirs:      exe
   default-language:    Haskell2010
