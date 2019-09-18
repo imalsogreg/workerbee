@@ -1,6 +1,6 @@
 { mkDerivation, aeson, algebraic-graphs, base, bytestring
 , containers, dhall, hspec, http-api-data, http-media, HUnit, mtl
-, pandoc, process, servant, servant-client, servant-docs
+, process, servant, servant-client, servant-docs
 , servant-server, stdenv, stm, temporary, text
 , unordered-containers, warp
 }:
@@ -12,7 +12,7 @@ mkDerivation {
   isExecutable = true;
   libraryHaskellDepends = [
     aeson algebraic-graphs base bytestring containers dhall hspec
-    http-api-data http-media HUnit mtl pandoc process servant
+    http-api-data http-media HUnit mtl process servant
     servant-client servant-docs servant-server stm temporary text
     unordered-containers warp
   ];

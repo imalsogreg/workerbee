@@ -39,7 +39,6 @@ library
                      , http-client
                      , http-media
                      , mtl
-                     , pandoc
                      , process
                      , servant
                      , servant-client
